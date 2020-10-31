@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "978021464035",
+    "firebase_url": "https://admob-57bdd.firebaseio.com",
+    "project_id": "admob-57bdd",
+    "storage_bucket": "admob-57bdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978021464035:android:24dc0b086ee8e93cf752d6",
+        "android_client_info": {
+          "package_name": "com.surelabs.admob"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978021464035-croc8n9cnpdgush4tgee9p8nrv60p1kd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.surelabs.admob",
+            "certificate_hash": "49c6f3bc13884d16d1b3eef724a17d5badfd6c49"
+          }
+        },
+        {
+          "client_id": "978021464035-jieiq4hbumgmjtce5kd9spp34cviiue1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGG_0bMWyWNMvMXEgKI1dd_mzN2eBWmco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978021464035-jieiq4hbumgmjtce5kd9spp34cviiue1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978021464035:android:07c984ff201754c2f752d6",
+        "android_client_info": {
+          "package_name": "com.surelabs.indonesia.chatapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978021464035-jieiq4hbumgmjtce5kd9spp34cviiue1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGG_0bMWyWNMvMXEgKI1dd_mzN2eBWmco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978021464035-jieiq4hbumgmjtce5kd9spp34cviiue1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
