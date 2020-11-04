@@ -8,7 +8,7 @@ import com.surelabs.indonesia.chatapplication.BaseActivity
 import com.surelabs.indonesia.chatapplication.R
 import com.surelabs.indonesia.chatapplication.chat.ChatActivity
 import com.surelabs.indonesia.chatapplication.contact.adapter.AdapterContact
-import com.surelabs.indonesia.model.DataItem
+import com.surelabs.indonesia.chatapplication.model.DataItem
 import kotlinx.android.synthetic.main.activity_contact.*
 
 class ContactActivity : BaseActivity() {

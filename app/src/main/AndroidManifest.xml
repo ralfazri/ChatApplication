@@ -24,10 +24,7 @@
             android:name=".contact.ContactActivity"
             android:parentActivityName=".main.ChatListActivity" />
 
-        <service
-            android:name=".MessagingHandleService"
-            android:enabled="false"
-            android:exported="false">
+        <service android:name=".MessagingHandleService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

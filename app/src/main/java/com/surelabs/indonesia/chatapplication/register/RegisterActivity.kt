@@ -2,18 +2,29 @@ package com.surelabs.indonesia.chatapplication.register
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.iid.FirebaseInstanceId
+import com.pixplicity.easyprefs.library.Prefs
 import com.surelabs.indonesia.chatapplication.BaseActivity
 import com.surelabs.indonesia.chatapplication.R
 import com.surelabs.indonesia.chatapplication.main.ChatListActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
+
+var userId = Calendar.getInstance().timeInMillis
 
 class RegisterActivity : BaseActivity() {
     private lateinit var vm: RegisterViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (Prefs.contains(USER_ID)) {
+            Intent(this@RegisterActivity, ChatListActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
         setContentView(R.layout.activity_main)
 
         vm = ViewModelProvider(this).get(RegisterViewModel::class.java)
@@ -38,14 +49,20 @@ class RegisterActivity : BaseActivity() {
                 userModel.nama = nama.text.toString()
                 vm.register(userModel)
                 vm.result.observe(this) {
-                    Snackbar.make(findViewById(android.R.id.content), it.message.toString(), Snackbar.LENGTH_LONG)
-                            .setAction("Menu Utama") {
-                                Intent(this@RegisterActivity, ChatListActivity::class.java).apply {
-                                    startActivity(this)
-                                    finish()
-                                }
-                            }
-                            .show()
+                    Snackbar.make(
+                        findViewById(android.R.id.content),
+                        it.message.toString(),
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                    SystemClock.sleep(3000)
+
+                    Intent(this@RegisterActivity, ChatListActivity::class.java).apply {
+                        Prefs.putString(USER_ID, userId.toString())
+                        Prefs.putString(NAMA, nama.text.toString())
+                        startActivity(this)
+                        finish()
+                    }
+
                     daftar.text = "DAFTAR"
                     daftar.isEnabled = true
                 }
@@ -59,12 +76,14 @@ class RegisterActivity : BaseActivity() {
     }
 
     companion object {
-        var TAG = RegisterActivity::class.java.simpleName
+        const val USER_ID = "userid"
+        const val NAMA = "nama"
     }
+
 }
 
 data class UserModel(
-        private val _id: Long = System.currentTimeMillis(),
-        var nama: String? = null,
-        var token: String? = null
+    private val _id: Long = userId,
+    var nama: String? = null,
+    var token: String? = null
 )

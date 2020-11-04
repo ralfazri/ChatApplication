@@ -3,8 +3,8 @@ package com.surelabs.indonesia.chatapplication.contact
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.surelabs.indonesia.model.ResponseContact
-import com.surelabs.indonesia.network.NetworkModule
+import com.surelabs.indonesia.chatapplication.model.ResponseContact
+import com.surelabs.indonesia.chatapplication.network.NetworkModule
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.HttpException

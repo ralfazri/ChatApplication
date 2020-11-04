@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.surelabs.indonesia.chatapplication.R
-import com.surelabs.indonesia.model.DataItem
+import com.surelabs.indonesia.chatapplication.model.DataItem
 import kotlinx.android.synthetic.main.item_adapter_contact.view.*
 
 class AdapterContact(

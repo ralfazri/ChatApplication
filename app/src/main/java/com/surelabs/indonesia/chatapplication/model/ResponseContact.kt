@@ -1,4 +1,4 @@
-package com.surelabs.indonesia.model
+package com.surelabs.indonesia.chatapplication.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
